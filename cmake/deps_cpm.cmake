@@ -41,6 +41,12 @@ CPMAddPackage(
     "CPPZMQ_BUILD_TESTS OFF" 
 )
 
+CPMAddPackage(
+    NAME spdlog
+    GITHUB_REPOSITORY gabime/spdlog
+    GIT_TAG v1.9.2
+
+)
 
 #CPMAddPackage(
 #    NAME Catch2

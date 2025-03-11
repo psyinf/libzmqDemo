@@ -1,3 +1,5 @@
 #add_subdirectory(_template)
 add_subdirectory(server)
 add_subdirectory(client)
+add_subdirectory(logDisplay)
+add_subdirectory(logStreamer)
