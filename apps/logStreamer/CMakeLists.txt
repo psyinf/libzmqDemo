@@ -12,6 +12,9 @@ target_link_libraries(${PROJECT_NAME}
     PUBLIC
     libzmq-static
     cppzmq-static
+    spdlog::spdlog
+    CLI11::CLI11
+    
 
 )
 target_include_directories(${PROJECT_NAME}

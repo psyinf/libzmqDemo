@@ -48,6 +48,20 @@ CPMAddPackage(
 
 )
 
+CPMAddPackage(
+    NAME nlohmann_json
+    GITHUB_REPOSITORY nlohmann/json
+    GIT_TAG v3.11.3
+)
+
+CPMAddPackage(
+    NAME cli11
+    GITHUB_REPOSITORY CLIUtils/CLI11
+    GIT_TAG v2.4.2
+    OPTIONS
+    "CLI11_BUILD_EXAMPLES OFF"
+)
+
 #CPMAddPackage(
 #    NAME Catch2
 

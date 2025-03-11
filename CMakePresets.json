@@ -87,8 +87,8 @@
         "ENABLE_DEVELOPER_MODE": "ON"
       },
       "environment": {
-        "CFLAGS": "/W4",
-        "CXXFLAGS": "/W4"
+        "CFLAGS": "/fsanitize=address",
+        "CXXFLAGS": "/fsanitize=address /W4"
       }
     },
     {
