@@ -1,16 +1,18 @@
-project(_template)
+project(streamServer)
 
 set(CMAKE_CXX_STANDARD 23)
 file(GLOB_RECURSE HEADER_FILES 	CONFIGURE_DEPENDS "*.h*")
 file(GLOB_RECURSE CPP_FILES 	CONFIGURE_DEPENDS "*.cpp")
 
-add_executable(${PROJECT_NAME} ${HEADER_FILES} ${CPP_FILES})
+add_executable(${PROJECT_NAME} ${HEADER_FILES} ${CPP_FILES} )
 
 
 
 target_link_libraries(${PROJECT_NAME}
     PUBLIC
-	sampleLib::sampleLib
+    libzmq-static
+    cppzmq-static
+
 )
 target_include_directories(${PROJECT_NAME}
 	PRIVATE
