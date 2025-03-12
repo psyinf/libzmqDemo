@@ -24,13 +24,13 @@ jobs:
     steps:
     - name: Set up cache
       id: cache-cpm
-      uses: actions/cache@v2
+      uses: actions/cache@v4
       with:
        path: ~/cpm-cache
        key: ${{ runner.os }}-cpm-${{ hashFiles('**/') }}
        restore-keys: |
          ${{ runner.os }}-cpm-    
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     - name: Setup GCC
       uses: pkgxdev/setup@v1
       with:
