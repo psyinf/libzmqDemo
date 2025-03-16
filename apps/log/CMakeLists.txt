@@ -1,0 +1,2 @@
+add_subdirectory(logDisplay)
+add_subdirectory(logStreamer)

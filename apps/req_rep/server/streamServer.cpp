@@ -3,10 +3,7 @@
 #include <thread>
 #include <iostream>
 
-
-
-
-int main() 
+int main()
 {
     using namespace std::chrono_literals;
 
@@ -14,13 +11,13 @@ int main()
     zmq::context_t context{1};
 
     // construct a REP (reply) socket and bind to interface
-    zmq::socket_t socket{context, zmq::socket_type::rep};
+    zmq::socket_t socket{context, zmq::socket_type::pull};
     socket.bind("tcp://*:5555");
 
     // prepare some static data for responses
     const std::string data{"World"};
 
-    for (;;) 
+    for (;;)
     {
         zmq::message_t request;
 
